@@ -1,0 +1,119 @@
+       
+
+    
+stages: 
+    - run
+
+# 3dmodel:
+#     stage: run
+
+#     # variables:
+#         # PIP_CACHE_DIR: "models/tooth-modeling/.cache/pip"
+#         # GIT_CLEAN_FLAGS: -fdx -e tooth/
+
+#     before_script:
+#       - echo "">/etc/sources.list
+#       - echo "deb http://mirrors.ustc.edu.cn/debian/ buster main">>/etc/sources.list
+#       - echo "deb http://mirrors.ustc.edu.cn/debian/debian-security buster/updates main">>/etc/sources.list
+#       - echo "deb http://mirrors.ustc.edu.cn/debian/debian buster-updates main">>/etc/sources.list
+#       - apt-get update
+#       - apt-get install -y libgl1-mesa-dev
+#       - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenv
+#       - virtualenv 3dmodel
+#       - source 3dmodel/bin/activate
+#     # cache:
+#     #     key: 3dmodelpip
+#     #     paths:
+#     #       - .cache/pip
+#     #       - 3dmodel/
+#     script:
+#       - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r models/3D-modeling/requirements.txt
+#       - python models/3D-modeling/main.py
+#     tags:
+#       - python38-tooth
+
+toothbuild:
+    stage: run
+
+    # variables:
+        # PIP_CACHE_DIR: "models/tooth-modeling/.cache/pip"
+        # GIT_CLEAN_FLAGS: -fdx -e tooth/
+
+    before_script:
+      - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenv
+      - virtualenv tooth
+      - source tooth/bin/activate
+    # cache:
+    #     key: toothpip
+    #     paths:
+    #       - .cache/pip
+    #       - tooth/
+    script:
+      - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r models/tooth-modeling/requirements.txt
+      - python models/tooth-modeling/main.py
+    tags:
+      - python38-tooth
+
+# cancer:
+#     stage: run
+
+#     variables:
+#         PIP_CACHE_DIR: "models/cancer-modeling/chenxi/.cache/pip"
+#         GIT_CLEAN_FLAGS: -fdx -e cancer/
+
+#     before_script:
+#       - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenv
+#       - virtualenv cancer
+#       - source cancer/bin/activate
+#     cache:
+#         key: cancerpip
+#         paths:
+#           - .cache/pip
+#           - cancer/
+#     script:
+#       - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r models/cancer-modeling/chenxi/requirements.txt
+#     #   - python models/cancer-modeling/chenxi/main.py
+#     tags:
+#       - python310-cancer
+      
+# tongue:
+#     stage: run
+
+#     variables:
+#         PIP_CACHE_DIR: "models/tongue-modeling/.cache/pip"
+#         GIT_CLEAN_FLAGS: -fdx -e tongue/
+
+#     before_script:
+#       - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenv
+#       - virtualenv tongue
+#       - source tongue/bin/activate
+#     cache:
+#         key: tonguepip
+#         paths:
+#           - .cache/pip
+#           - tongue/
+#     script:
+#       - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r models/tongue-modeling/requirements.txt
+#       - python models/tongue-modeling/main.py
+#     tags:
+#       - python310-tongue
+      
+backend:
+    stage: run
+    variables:
+        PIP_CACHE_DIR: "back-end/back-end-iter2/.cache/pip"
+        # GIT_CLEAN_FLAGS: -fdx -e backend/
+    before_script:
+      - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple virtualenv
+      - virtualenv backend
+      - source backend/bin/activate
+    # cache:
+    #     key: backendpip
+    #     paths:
+    #       - .cache/pip
+    #       - backend/
+    script:
+      - pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r back-end/back-end-iter2/requirement.txt
+      - python back-end/back-end-iter2/flaskr/app.py
+    tags:
+      - python311-backend

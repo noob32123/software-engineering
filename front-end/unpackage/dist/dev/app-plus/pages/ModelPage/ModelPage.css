@@ -1,0 +1,201 @@
+
+/* 上方说明 */
+.title-section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.title{
+	margin-top: 0.5625rem;
+	font-weight: bold;
+	letter-spacing: 0.15625rem;
+}
+.total{
+	margin-top: 0.5625rem;
+	font-weight: bold;
+	width: 80%;
+}
+.sanwei{
+	width: 6.25rem;
+	height: 6.25rem;
+}	
+/* 口腔bar */
+.actions{
+	display: flex;
+	flex-direction: column;
+}
+.action{
+	display: flex;
+	justify-content: space-around;
+	height: 10.9375rem;
+	margin-top: 0.9375rem;
+}
+.left-photo{
+	width: 50%;
+	font-size: 0.875rem;
+}
+.left-img{
+	width: 10rem;
+	height: 7.5rem;
+	border-radius: 0.3125rem;
+}
+.right-photo{
+	display: flex;
+	justify-content: center;
+	width: 10rem;
+}
+.photo-result{
+	width: 10rem;
+	height: 7.5rem;
+	border-radius: 0.3125rem;
+}
+/******************************/
+.confirm-button{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 1rem;
+	color: white;
+	background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+	font-weight: bold;
+	padding: 0.5625rem;
+	border-radius: 0.375rem;
+	margin-top: 0.3125rem;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.restart-button{
+	background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
+}
+.yes{
+	width: 1.25rem;
+	height: 1.25rem;
+}
+.camera-icon{
+	width: 1.3125rem;
+	height: 1.3125rem;
+	border-radius: 50%;
+	margin-right: 0.3125rem;
+}
+.kaishi-container{
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+.paizhao-button{
+	width: 7.5rem;
+	height: 1.875rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.3125rem;
+	border-radius: 0.25rem;
+	background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+	font-weight: bold;
+	color: white;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+	margin-bottom: 0.3125rem;
+}
+
+/* 拍照加载 */
+.loading1-container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 20%;
+	margin-bottom: 20%;
+	font-weight: bold;
+	letter-spacing: 0.03125rem;
+}
+.loading1{
+	margin-bottom: 20%;
+}
+.loading1,
+.loading1 > div {
+  position: relative;
+  box-sizing: border-box;
+}
+.loading1 {
+  display: block;
+  font-size: 0;
+  color: #000;
+}
+.loading1.la-dark {
+  color: #333;
+}
+.loading1 > div {
+  display: inline-block;
+  float: none;
+  background-color: currentColor;
+  border: 0 solid currentColor;
+}
+.loading1 {
+  width: 54px;
+  height: 18px;
+}
+.loading1 > div {
+  width: 10px;
+  height: 10px;
+  margin: 4px;
+  border-radius: 100%;
+  animation: ball-beat 0.7s -0.15s infinite linear;
+}
+.loading1 > div:nth-child(2n-1) {
+  animation-delay: -0.5s;
+}
+@keyframes ball-beat {
+50% {
+    opacity: 0.2;
+    transform: scale(0.75);
+}
+100% {
+    opacity: 1;
+    transform: scale(1);
+}
+}
+
+/* 确认按钮 */
+.confirm-section{
+	display: flex;
+	justify-content: center;
+}
+.confirm{
+	background-image: linear-gradient(to right, #e9da68 0%, #f98c1f 100%);
+}
+
+/* 分析成功 */
+.confirm-message{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0.9375rem;
+}
+.success{
+	width: 7.8125rem;
+	height: 7.8125rem;
+}
+.success-message{
+	margin-top: 0.5625rem;
+	font-weight: bold;
+	width: 80%;
+}
+
+/* 分析结果 */
+.model-text{
+	display: flex;
+	justify-content: center;
+	margin: 0.5625rem;
+	font-weight: bold;
+}
+.image-item{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.model-image{
+	margin: 0.0625rem;
+	height: 7.8125rem;
+}

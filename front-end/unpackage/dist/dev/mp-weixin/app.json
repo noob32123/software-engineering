@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/TonguePage/TonguePage",
+    "pages/CancerPage/CancerPage"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "",
+    "backgroundColor": "red"
+  },
+  "tabBar": {
+    "color": "#f8fffc",
+    "backgroundColor": "#f8fffc",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tooth.png",
+        "selectedIconPath": "static/tooth-s.png"
+      },
+      {
+        "pagePath": "pages/TonguePage/TonguePage",
+        "iconPath": "static/tongue-b.png",
+        "selectedIconPath": "static/tongue-s.png"
+      },
+      {
+        "pagePath": "pages/CancerPage/CancerPage",
+        "iconPath": "static/cancer.png",
+        "selectedIconPath": "static/cancer-s.png"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

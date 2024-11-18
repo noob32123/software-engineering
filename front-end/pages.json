@@ -1,0 +1,81 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+			  "navigationStyle": "custom",
+			  "navigationBarTitleText": "首页",
+			  "navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/TonguePage/TonguePage",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/CancerPage/CancerPage",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path" : "pages/ModelPage/ModelPage",
+			"style" : 
+			{
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "首页",
+				"navigationBarTextStyle": "black"
+			}
+		}
+	],
+	"globalStyle": {
+	  "navigationBarTextStyle": "black",
+	  "navigationBarTitleText": "",
+	  "backgroundColor": "red",
+	  "app-plus": {
+			"bounce": "none"
+		}
+	},
+	"tabBar": {
+	  // "color": "#f8fffc",
+	  "color":"black",
+	  "backgroundColor": "#f8fffc",
+	  "borderStyle": "white",
+	  "fontSize": "12px",
+	  "list": [
+		{
+		  "pagePath": "pages/index/index",
+		  "iconPath": "static/tooth.png",
+		  "selectedIconPath": "static/tooth-s.png",
+		  "text":"牙齿健康检测"
+		},
+	    {
+	      "pagePath": "pages/TonguePage/TonguePage",
+	      "iconPath": "static/tongue-b.png",
+	      "selectedIconPath": "static/tongue-s.png",
+		  "text":"消化健康检测"
+	    },
+		{
+		  "pagePath": "pages/CancerPage/CancerPage",
+		  "iconPath": "static/cancer.png",
+		  "selectedIconPath": "static/cancer-s.png",
+		  "text":"癌症风险分析"
+		},
+		{
+		  "pagePath": "pages/ModelPage/ModelPage",
+		  "iconPath": "static/jianmo.png",
+		  "selectedIconPath": "static/jianmo-s.png",
+		  "text":"口腔三维重建"
+		}
+	  ]
+	},
+	"uniIdRouter": {}
+}
